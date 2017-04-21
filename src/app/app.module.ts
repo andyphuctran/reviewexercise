@@ -4,17 +4,24 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { MypostComponent } from './mypost/mypost.component';
+import {PostService} from './post.service';
+import { SearchComponent } from './search/search.component';
+import { MyPipePipe } from './my-pipe.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MypostComponent,
+    SearchComponent,
+    MyPipePipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
